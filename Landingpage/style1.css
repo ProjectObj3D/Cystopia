@@ -1,0 +1,23 @@
+body{
+	padding: 0;
+	margin: 0;
+	background: black;
+}
+
+/*classes pour l'écriture */
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto autem earum, blanditiis est ad, tempore perferendis tenetur saepe error sint. Dolores a ipsam sapiente quidem, tempore vero sint accusantium quo.
+.colorBlueHaut{
+	color:#2e9ed8;
+}
+.colorBlueMilieu{
+	color:#2d9bd3;
+}
+.colorBlueBas{
+	color:#1d9cdc;
+	opacity: 0.75;
+}
+
+// haut 
+imgCyst{
+
+}
