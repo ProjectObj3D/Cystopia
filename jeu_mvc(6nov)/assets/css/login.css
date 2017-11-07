@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
+
+body{
+  width: 100%;
+  background-image: url(../images/fond_propos.png), url(../images/bckg.png);
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  font-weight:200;
+  padding-top: 90px;
+  color:#666666;
+  background-color: black;
+
+}
+
+.container{
+  width: 430px;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.card{
+  position: relative;
+  margin: auto;
+  width: 430px;
+  height: 568px;
+  perspective: 2200px;
+  perspective-origin: 50% 25%;
+}
+
+.card_front{
+   width: 400px;
+   height: 568px;
+   position: absolute;
+   backface-visibility: hidden;
+   animation: rotationA 5s  cubic-bezier(.47,.32,.26,.44) infinite; 
+
+}
+
+
+
+.card_back{
+   width: 400px;
+   height: 568px;
+   border-radius: 8px;
+   position: absolute;
+   backface-visibility: hidden;
+   transform: rotateY(-180deg);
+   animation: rotationB 5s cubic-bezier(.47,.32,.26,.44) infinite;
+
+   background-image: url(../images/carte.png);
+   background-size: contain;
+   box-shadow: 0px 0px 25px 10px rgba(32,162,215,.39);
+
+
+ }
+
+@keyframes rotationA{
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(-360deg);
+  }
+}
+
+@keyframes rotationB{
+  from{
+    transform: rotateY(180deg);
+  }
+
+  to{
+    transform: rotateY(-180deg);
+  }
+}
+
+/*.card_front:hover{
+   animation: step-end;
+}
+
+.card_front:hover ~ .card_back{
+   animation: step-end;
+}
+*/
+
+
+.panel-login {
+    border: none;
+    box-shadow: 0px 0px 25px 10px rgba(188,190,194,0.39);
+  }
+
+.selected{
+  box-shadow: 0px 0px 15px 5px rgb(32,162,215);
+}
+
+.panel-login>.panel-heading .tabs{
+  padding: 0;
+}
+.panel-login h2{
+  font-size: 20px;
+  font-weight: 300;
+  margin: 22px;
+}
+.panel-login>.panel-heading {
+  color: #848c9d;
+  background-color: #e8e9ec;
+  border-color: #fff;
+  text-align:center;
+  border-radius: 8px;
+  border-bottom: 0px;
+  padding: 0px 15px;
+}
+.panel-login .form-group {
+  padding: 0 30px;
+}
+.panel-login>.panel-heading .login {
+  padding: 20px 30px;
+  border-bottom-leftt-radius: 5px;
+}
+.panel-login>.panel-heading .register {
+  padding: 20px 30px;
+  background: #2d3b55;
+  border-bottom-right-radius: 5px;
+}
+.panel-login>.panel-heading a{
+  text-decoration: none;
+  color: #666;
+  font-weight: 300;
+  font-size: 16px;
+  transition: all 0.1s linear;
+}
+.panel-login>.panel-heading a#register-form-link {
+  color: #fff;
+  width: 100%;
+  text-align: right;
+}
+.panel-login>.panel-heading a#login-form-link {
+  width: 100%;
+  text-align: left;
+}
+
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+  height: 45px;
+  border: 0;
+  font-size: 16px;
+  box-shadow: none;
+  border-bottom: 1px solid #e7e7e7;
+  border-radius: 0px;
+  padding: 6px 0px;
+}
+.btn-login {
+  background-color: #E8E9EC;
+  outline: none;
+  color: #2D3B55;
+  font-size: 14px;
+  height: auto;
+  font-weight: normal;
+  padding: 14px 0;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.btn-login:hover{
+  color: #fff;
+  background-color: #2D3B55;
+}
+.btn-register {
+  background-color: #E8E9EC;
+  outline: none;
+  color: #2D3B55;
+  font-size: 14px;
+  height: auto;
+  font-weight: normal;
+  padding: 14px 0;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.btn-register:hover{
+  color: #fff;
+  background-color: #2D3B55;
+}
+.password_forget{
+  text-decoration: none;
+  cursor :pointer;
+  color: #0487ef;
+}
+.password_forget:hover{
+  text-decoration: none;
+  color: #666;
+}
+.error_subscribe{
+    color: red;
+    border-bottom-color:  red !important;
+}
+.error_subscribe::-webkit-input-placeholder { /* Chrome */
+  color: red;
+}
+.error_subscribe:-ms-input-placeholder { /* IE 10+ */
+  color: red;
+}
+.error_subscribe::-moz-placeholder { /* Firefox 19+ */
+  color: red;
+  opacity: 1;
+}
+.error_subscribe:-moz-placeholder { /* Firefox 4 - 18 */
+  color: red;
+  opacity: 1;
+}
+
+.panel-body{
+  height: 505px;
+  width: 400px;
+  margin: auto;
+}
+
+/*FOOTER*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
