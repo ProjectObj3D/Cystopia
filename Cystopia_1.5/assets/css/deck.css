@@ -1,0 +1,125 @@
+.body{
+  width: 100%;
+  background-image: url(../images/fond_propos.png), url(../images/bckg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  font-weight:200;
+  padding-top: 90px;
+  color:#666666;
+  background-color: black;
+
+}
+
+.carte_dos{
+
+	width: 140px;
+	height: 194px;
+	background: url('/heros/seiya.png') no-repeat center / contain;
+	display: inline-block;
+	/*position: absolute;*/
+	color:white;
+	text-align: center;
+	margin: 15px 8px 40px 8px;
+    border-radius: 14px;
+    background-color: white;
+    /*box-shadow: 8px 8px 5px #656565;*/
+
+   
+}
+
+
+.carte_hero{
+
+	width: 254px;
+	height: 350px;
+	background: url('../heros/seiya.png') no-repeat center / contain;
+	display: inline-block;
+	/*position: absolute;*/
+	color:white;
+	text-align: center;
+	margin: 4vw ;
+    border-radius: 14px;
+    background-color: white;
+    /*box-shadow: 8px 8px 5px #656565;*/
+    font-size: 2em;
+}
+
+.nomHero{
+	color:grey;
+	border:2px solid grey;
+	margin-bottom:-55px;
+}
+
+.container_deck{
+	width: 80vw;
+	/*height: 40vh;*/
+	margin: 0 auto;
+	border:3px solid #666666;
+	padding: 15px;
+	font-size: 0.85em;
+}
+
+a{
+	color:red;
+	text-decoration: none;
+	margin: auto;
+}
+
+.nomCarteDeck{
+	position: relative;
+    bottom: -200px;
+    border: solid #666666 2px;
+    margin: 5px auto;
+    color: #666666;
+    padding: 3px;
+}
+
+.choixHero{
+	/*border: 2px solid red;*/
+	width: 35%;
+	display: inline-block;
+}
+
+.nomCarteHero{
+	position: relative;
+	width: 254px;
+    bottom: 50px;
+    margin: auto;
+    border: solid #666666 2px;
+    
+    color: #666666;
+    font-weight: bold;
+    padding: 4px auto;
+    font-size: 0.8em;
+}
+
+.new_deck{
+	border:solid 3px white;
+	padding: 15px;
+	text-align: center;
+	width: 80vw;
+	margin:10px auto;
+	color:white;
+}
+
+.navbar{
+	width: 80vw;
+	margin: auto;
+	margin-bottom: 15px;
+	background-color: white;
+}
+
+.white{
+	color:white;
+}
+
+.centrer{
+	text-align: center;
+	color:grey;
+}
+
+.input_choix{
+	position: relative;
+	right:-15px;
+}
