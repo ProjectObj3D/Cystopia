@@ -144,7 +144,7 @@ window.onload = function()
 
 };
 
-
+// ajax de Simon 
 function ajax(file, data, fct) {
     var query = new XMLHttpRequest();
     query.onreadystatechange = function(e) {
