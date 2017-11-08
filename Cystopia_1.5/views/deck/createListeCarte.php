@@ -139,8 +139,7 @@
                         </p>
                     </a>
                 </div>";
-                //echo '<li><a href="?id='.$val->getId().'">'.$val->getNom().'</a></li>';
-                 //echo "<input type='checkbox' name='choix_cartes_team". $val->getId() ."' value=".$val->getId().">" .$val->getNom(). "<br>";
+
             }
             echo '</div>';
         }

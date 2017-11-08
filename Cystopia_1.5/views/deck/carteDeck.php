@@ -4,6 +4,7 @@
 
 <?php
    // /*
+        //var_dump($_SESSION);
         if (isset($tabdecks)) {
             echo '<div class="container_deck">';
             $decal = 140;

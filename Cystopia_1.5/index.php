@@ -41,7 +41,15 @@ if( isset($params['idDeckDisplay'] ))
     $_SESSION['idDeckDisplay'] = $params['idDeckDisplay'] ;
 }
 
+if( isset($params['deckNom'] ))
+{
+    $_SESSION['deckNom'] = $params['deckNom'] ;
+}
 
+if( isset($params['deckHero'] ))
+{
+    $_SESSION['deckHero'] = $params['deckHero'] ;
+}
 
 //var_dump($_SESSION);
 //var_dump($params);

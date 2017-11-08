@@ -27,6 +27,7 @@ if (isset($_SESSION))
 	
 	
 	<?php
+//    var_dump($tabdecks);
 		if ($tabdecks) {
 			echo '<div class="container_deck">';
 			$decal = 140;
@@ -43,8 +44,9 @@ if (isset($_SESSION))
 				$nomDeck = $nomDeck == "" ? " ... " : $nomDeck;
 				echo "
 					<div class='carte_dos' style='left:".$decal."px;    background-image: url(./assets/images/heros/".$Hero.");'>
-						<a href='?control=deck&action=displayCardOfDeckById&idDeckDisplay=".$val->getId()."''>".' '."
+						<a href='?control=deck&action=displayCardOfDeckById&idDeckDisplay=".$val->getId()."&deckNom=".$val->getNom()."&deckHero=".$val->getHero()."''>".' '."
 							<p class='nomCarteDeck'>".$nomDeck."</p>
+						
 						</a>
 					</div>";
 
