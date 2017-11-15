@@ -19,7 +19,7 @@
 			 	
 			 	echo "
 			 		<div class='choixHero'>
-			 			<div class='carte_hero' style='background-image: url(./assets/heros/".$Hero.");'>
+			 			<div class='carte_hero' style='background-image: url(./assets/images/heros/".$Hero.");'>
 				 			<a href='?control=deck&action=createTeam&choix_hero=".$hero->getId()."''>".' '."
 				 				<div class='nomCarteHero'>".$hero->getNom()."</div>
 				 			</a>
