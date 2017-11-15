@@ -68,43 +68,45 @@ window.onload = function()
     //  Main 1 - Position des cartes selon leur nombre ************************
 
 
-    var tailleMain = 22; // (en vmax)
+    // var tailleMain = 22; // (en vmax)
 
-    var tailleCarte = tailleMain / 3.5;
+    // var tailleCarte = tailleMain / 3.5;
 
-    var nbCartes = document.getElementById('hand1').childElementCount;
+    // var nbCartes = document.getElementById('hand1').childElementCount;
 
-    var reste = tailleMain / nbCartes;
+    // var reste = tailleMain / nbCartes;
 
-    var decal = (tailleMain - (tailleCarte - reste)) / nbCartes;
+    // var decal = (tailleMain - (tailleCarte - reste)) / nbCartes;
 
-    for (i = 0; i < nbCartes; i++)
-    {
-        left = decal * i;
+    // for (let i = 0; i < nbCartes; i++)
+    // {
+    //     left = decal * i;
 
-        var div3 = document.getElementById('hero1carte' + i);
-        div3.style.transform = 'translate(' + left + 'vmax, -4.3vmax)';
-    }
+    //     var div3 = document.getElementById('hero1carte' + i);
+    //     div3.style.transform = 'translate(' + left + 'vmax, -4.3vmax)';
+    // }
 
 
-    var nbCartes2 = document.getElementById('hand2').childElementCount;
+    // var nbCartes2 = document.getElementById('hand2').childElementCount;
 
-    var reste2 = tailleMain / nbCartes2;
+    // var reste2 = tailleMain / nbCartes2;
 
-    var decal2 = (tailleMain - (tailleCarte - reste2)) / nbCartes2;
+    // var decal2 = (tailleMain - (tailleCarte - reste2)) / nbCartes2;
 
-    for (i = 0; i < nbCartes2; i++)
-    {
-        left = decal2 * i;
+    // for (let i = 0; i < nbCartes2; i++)
+    // {
+    //     left = decal2 * i;
 
-        var div4 = document.getElementById('hero2carte' + i);
-        div4.style.transform = 'translate(' + left + 'vmax, 0vmax)';
-    }
+    //     var div4 = document.getElementById('hero2carte' + i);
+    //     div4.style.transform = 'translate(' + left + 'vmax, 0vmax)';
+    // }
+    replaceCardMain(1);
+    replaceCardMain(2);
 
     //  Creation des 20 divs du deck 1 **********************
 
 
-     for (j = 0; j < 20; j++)
+     for (let j = 0; j < 20; j++)
      {
          var div4 = document.createElement('div');
          div4.setAttribute('class', 'cartePioche');
@@ -126,8 +128,8 @@ window.onload = function()
      document.getElementById('imgHero2').style.backgroundImage = 'url("assets/images/heros/' + heroName2 + '_2.png")';
 
 
-    var carte = document.getElementById("hero2carte1");
-    document.getElementById("hand2").appendChild(carte);
+    // var carte = document.getElementById("hero2carte1");
+    // document.getElementById("hand2").appendChild(carte);
 
 
     // Evenement click sur le bouton fin de tour
@@ -146,20 +148,20 @@ window.onload = function()
 
     // Evenement drag & drop
 
-    $('.carte').draggable({
+    $('.handplayer').draggable({
         revert: function(event, ui) {
            if(event === false) {
-               replaceCardMain();
+               replaceCardMain(2);
            }
         }, 
         start: function() {
            
         },
         drag: function() {
-           $(this).css({'transform':'none'});
+           $(this).css({'transform':'none', 'z-index':'10'});
         },
         stop: function(event, ui) {
-           $(this).css({'left':'0','top':'0'});
+           $(this).css({'left':'0','top':'0', 'z-index':'0'});
 
         }
     });
@@ -167,8 +169,17 @@ window.onload = function()
     $("#dropper").droppable({
         drop:function(event, ui){
             $(this).append(ui.draggable);
-            $(ui.draggable).css({'position':'relative', 'transform':'none', 'top':'0', 'left':'0'});
-            replaceCardMain();
+            $(ui.draggable).css({'position':'relative', 'transform':'none', 'top':'0', 'left':'0', 'width':'7.5vmax', 'height':'10.5vmax', 'z-index':'100'});
+            replaceCardMain(2);
+
+            var elm = this.getElementsByClassName('handplayer');
+            var countCards = elm.length;
+            if(countCards > 8) {
+                var margin = (countCards*7.5) / 30 ;
+                for(var i = 0; i<countCards; i++) {
+                    elm[i].style.marginRight = '-'+margin+'vmax';
+                }
+            }
         }
     });
 
@@ -176,11 +187,11 @@ window.onload = function()
 };
 
 
-function replaceCardMain() {
+function replaceCardMain(hand) {
 
-    var elm = $( "#hand1" ).find( ".carte" );
+    var elm = $( hand == 1 ? '#hand1' : '#hand2').find( ".carte" );
     var nbCartes = elm.length;
-    var tailleMain = nbCartes*5.5; // (en vmax)
+    var tailleMain = 22; // (en vmax)
     var tailleCarte = tailleMain / 3.5;
     var reste = tailleMain / nbCartes;
     var decal = (tailleMain - (tailleCarte - reste)) / nbCartes;
@@ -190,7 +201,8 @@ function replaceCardMain() {
         left = decal * i;
 
         var div3 = elm[i];
-        div3.style.transform = 'translate(' + left + 'vmax, -4.3vmax)';
+        var h = hand == 1 ? -4.3 : 0;
+        div3.style.transform = 'translate(' + left + 'vmax, '+h+'vmax)';
     }
 }
 

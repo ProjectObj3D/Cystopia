@@ -30,7 +30,7 @@
 				<td id="col3">
                     <div id="hand1">
                         <?php
-                            for ($i = 0; $i < 4; $i++)
+                            for ($i = 0; $i < 20; $i++)
                             {
                                 echo '<div class="carte" id="hero1carte'.$i.'"></div>';
                             }
@@ -76,11 +76,11 @@
 			</tr>
 
 			<tr class="row3">
-				<td colspan="3" id="dropper" align="center"></td>
+				<td colspan="3" align="center"></td>
 			</tr>
 
 			<tr class="row3">
-				<td colspan="3"></td>
+				<td colspan="3" id="dropper" align="center"></td>
 			</tr>
 
 			<tr class="row2">
@@ -105,7 +105,12 @@
                 </td>
 				<td>
                     <div id="hand2">
-
+                         <?php
+                            for ($i = 0; $i < 20; $i++)
+                            {
+                                echo '<div class="carte handplayer" id="hero2carte'.$i.'"></div>';
+                            }
+                        ?>
                     </div>
                 </td>
 				<td colspan="2">
