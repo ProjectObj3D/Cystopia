@@ -1,4 +1,0 @@
-AuthName "Page Admin"
-AuthType Basic
-AuthUserFile "/Users/Admin/Documents/DEV/PHP/Cystopia/landingpage/admin/.htpasswd"
-Require valid-user
