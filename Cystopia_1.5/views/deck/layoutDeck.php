@@ -11,6 +11,7 @@
     </head>
     <body class='body'>
         <nav class="navbar">
+            <?= $titre ?>
             <a class="navbar-brand " href="?logout=1" name="deconectMenu" ><i class="fa fa-sign-out"></i></a>
         </nav>
         <?=$view?>

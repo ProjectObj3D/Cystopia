@@ -11,11 +11,15 @@
     font-family : 'trs-million';
     src : url('../../assets/fonts/trs-million-rg.ttf') format('truetype');
 }
+@font-face{
+    font-family : 'GeosansLight';
+    src : url('../../assets/fonts/GeosansLight.ttf') format('truetype');
+}
 
 body{  margin: 0;  padding: 0;  background-color: black;  }
 
 #plateau{  width: 91vmax;  height: 51vmax;  background: url('../images/plateau/bckg.png') no-repeat top / contain;  position: relative;
-           border-collapse: collapse;  margin: auto ;  }
+           border-collapse: collapse;  margin: auto ;  overflow: hidden;}
 tr, td{
     /*border: 1px solid white;*/
 }
@@ -116,6 +120,73 @@ tr, td{
 .cardData div:nth-child(3){  color: rgb(245,32,106);  margin: 0 4vmax 0 4vmax;  }
 .cardData div:nth-child(4){  color: rgb(103,204,50);  }
 
+/*Style Carte Creature*/
+
+.carteType1{
+    /*background-image: url('1_naruto.png');* A mettre en HTML ->  style="display"*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 10.42vmax;
+    width: 7.5vmax;
+    margin: auto;
+    position: relative;
+}
+.carteType1 *{
+    position: absolute;
+}
+
+.carteNum{
+    font-family: 'trs-million';
+    text-shadow: .06vmax .06vmax #0f0f0f;
+}
+
+#carteMana{
+    top: .7vmax;
+    left: .95vmax;
+    width: .42vmax;
+    color: rgb(42,194,248);
+    font-size: .75vmax;
+}
+#carteAttaque{
+    top: 2.21vmax;
+    left: .97vmax;
+    width: .43vmax;
+    font-size: .65vmax;
+    color: rgb(245,32,106);
+}
+#carteVie{
+    top: 3.6vmax;
+    left: .97vmax;
+    width: .65vmax;
+    font-size: .64vmax;
+    color: rgb(103,204,50);
+}
+
+#carteNom{
+    text-align: center;
+    font-family: 'ConthraxSb';
+    text-transform: uppercase;
+    text-shadow: .06vmax .06vmax #0f0f0f;
+    font-size: .40vmax;
+    color: rgb(42,194,248);
+    bottom: 3.05vmax;
+    left: 1.95vmax;
+    width: 3.55vmax;
+    height: .65vmax;
+}
+
+#carteText{
+    font-family: 'GeosansLight';
+    text-align: center;
+    color: rgb(42,194,248);
+    font-size: .4vmax;
+    font-weight: 600;
+    text-shadow: .02vmax .02vmax #0f0f0f;
+    bottom: .65vmax;
+    left: .7vmax;
+    width: 4.9vmax;
+    height: 1.75vmax;
+}
 
 
 

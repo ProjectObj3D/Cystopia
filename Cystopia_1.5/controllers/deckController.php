@@ -40,7 +40,8 @@ class deckController extends coreController
  			// on affiche les decks du tableau 
  			$message = " on a plusieurs decks ";
  			// var_dump($tabdecks);
-            $this->renderView('deck', array('id'=>$id,'tabdecks' => $tabdecks));
+            $titre = " Mes Decks";
+            $this->renderView('deck', array('id'=>$id,'tabdecks' => $tabdecks, "titre" => $titre));
  		}
  		else
         {
@@ -60,7 +61,7 @@ class deckController extends coreController
 
 
         //include 'views'.DIRECTORY_SEPARATOR.'deck'.DIRECTORY_SEPARATOR.'create.php';
-        $this->renderView('create', array('heros'=>$heros));
+        $this->renderView('create', array('heros'=>$heros,"titre" => "Choix Du Héros : "));
     }
 
 
@@ -86,8 +87,12 @@ class deckController extends coreController
             $cartes = $this->getModel()->listCarteTeam($idChoixHero);
         }
 
+        if ( $idChoixHero == 1 ){$titre = " Team Manga";}
+        elseif ( $idChoixHero == 2 ){$titre = " Team Cyber";}
+
+
         //include 'views'.DIRECTORY_SEPARATOR.'deck'.DIRECTORY_SEPARATOR.'createListeCarte.php';
-        $this->renderView('createListeCarte', array('cartes'=>$cartes));
+        $this->renderView('createListeCarte', array('cartes'=>$cartes,'titre' => $titre));
 
     }
 
@@ -118,12 +123,29 @@ class deckController extends coreController
         $tabdecks = $this->getModel()->listCardOfDeckById($idDeck);
 
         $message = "";
+        $titre = " Deck : ";
+        if ( isset($_SESSION['deckNom']))
+        {
+            $titre .= $_SESSION['deckNom'];
+        }
+
+        if ( isset($_SESSION['deckHero']) )
+        {
+            if ($_SESSION['deckHero'] == 1)
+            {
+                $titre .= " - Team Manga ";
+            }
+            elseif ($_SESSION['deckHero'] == 2)
+            {
+                $titre .= " - Team Cyber ";
+            }
+        }
         if ($tabdecks != false && $tabdecks > 0)
         {
             // on affiche les decks du tableau 
             $message = " on a plusieurs cartes ";
             // var_dump($tabdecks);
-            $this->renderView('carteDeck', array('tabdecks' => $tabdecks));
+            $this->renderView('carteDeck', array('tabdecks' => $tabdecks,"titre" => $titre));
         }
         else
         {
@@ -131,7 +153,7 @@ class deckController extends coreController
             //$message = " Crée ton Deck  ";
             //$this->createAction();
 
-            $this->renderView('carteDeck', array('cartes' => "Pas de Cartes dans ce Deck"));
+            $this->renderView('carteDeck', array('cartes' => "Pas de Cartes dans ce Deck", "titre" => $titre));
         }
 
         //include 'views'.DIRECTORY_SEPARATOR.'deck'.DIRECTORY_SEPARATOR.'deck.php';
