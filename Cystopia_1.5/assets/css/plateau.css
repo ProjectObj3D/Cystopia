@@ -15,7 +15,7 @@
 body{  margin: 0;  padding: 0;  background-color: black;  }
 
 #plateau{  width: 91vmax;  height: 51vmax;  background: url('../images/plateau/bckg.png') no-repeat top / contain;  position: relative;
-           border-collapse: collapse;  margin: auto ;  }
+           border-collapse: collapse;  margin: auto ;  overflow: hidden;}
 tr, td{
     /*border: 1px solid white;*/
 }

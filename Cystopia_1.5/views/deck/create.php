@@ -1,19 +1,7 @@
-<!--
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<title> create </title>
-	</head>
-	<body>
-	-->
-       <!-- <form id="choix_deck_form" action="?control=deck&action=createTeam" method="post" role="form" > -->
-       	<div class="container_deck">
+<div class="container_deck">
        		<div class="centrer">
 		<?php
-
-		
-			foreach ($heros as $hero) {
+            foreach ($heros as $hero) {
 				
 			 	$Hero = ($hero->getId()=='1') ? 'seiya.png' : 'sonny.jpg';
 			 	
@@ -37,9 +25,6 @@
             
         </form>
         <!--
-	</body>
-</html>
--->
 
 
 

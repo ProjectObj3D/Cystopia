@@ -130,6 +130,7 @@ window.onload = function()
     document.getElementById("hand2").appendChild(carte);
 
 
+    // Evenement click sur le bouton fin de tour
 
     btnTour = document.getElementById('innerButton');
     btnTour.addEventListener("click", function(event){
@@ -142,9 +143,58 @@ window.onload = function()
         });
     });
 
+
+    // Evenement drag & drop
+
+    $('.carte').draggable({
+        revert: function(event, ui) {
+           if(event === false) {
+               replaceCardMain();
+           }
+        }, 
+        start: function() {
+           
+        },
+        drag: function() {
+           $(this).css({'transform':'none'});
+        },
+        stop: function(event, ui) {
+           $(this).css({'left':'0','top':'0'});
+
+        }
+    });
+
+    $("#dropper").droppable({
+        drop:function(event, ui){
+            $(this).append(ui.draggable);
+            $(ui.draggable).css({'position':'relative', 'transform':'none', 'top':'0', 'left':'0'});
+            replaceCardMain();
+        }
+    });
+
+
 };
 
 
+function replaceCardMain() {
+
+    var elm = $( "#hand1" ).find( ".carte" );
+    var nbCartes = elm.length;
+    var tailleMain = nbCartes*5.5; // (en vmax)
+    var tailleCarte = tailleMain / 3.5;
+    var reste = tailleMain / nbCartes;
+    var decal = (tailleMain - (tailleCarte - reste)) / nbCartes;
+
+    for (i = 0; i < nbCartes; i++)
+    {
+        left = decal * i;
+
+        var div3 = elm[i];
+        div3.style.transform = 'translate(' + left + 'vmax, -4.3vmax)';
+    }
+}
+
+// ajax de Simon 
 function ajax(file, data, fct) {
     var query = new XMLHttpRequest();
     query.onreadystatechange = function(e) {

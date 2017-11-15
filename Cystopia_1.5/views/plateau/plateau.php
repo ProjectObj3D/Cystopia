@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Cystopia</title>
     <link rel="stylesheet" href="assets/css/plateau.css">
+    <script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script type="text/javascript" src="assets/js/plateau.js"></script>
 </head>
 	<body>
@@ -29,11 +32,13 @@
                         <?php
                             for ($i = 0; $i < 4; $i++)
                             {
-                                echo '<div class="carte" id="hero1carte'.$i.'" draggable="true"></div>';
+                                echo '<div class="carte" id="hero1carte'.$i.'"></div>';
                             }
                         ?>
                     </div>
+
                 </td>
+
 				<td id="col4" colspan="2">
                     <div class="cardData" id="cardData1">
                         <h5>MOTOKO</h5>
@@ -71,7 +76,7 @@
 			</tr>
 
 			<tr class="row3">
-				<td colspan="3" id="dropper"></td>
+				<td colspan="3" id="dropper" align="center"></td>
 			</tr>
 
 			<tr class="row3">
