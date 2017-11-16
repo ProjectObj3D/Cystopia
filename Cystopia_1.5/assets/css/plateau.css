@@ -116,10 +116,19 @@ tr, td{
 .cardData div:nth-child(3){  color: rgb(245,32,106);  margin: 0 4vmax 0 4vmax;  }
 .cardData div:nth-child(4){  color: rgb(103,204,50);  }
 
+.dialog_carte{width: 800px !important;height: 557px !important;position:absolute;background-color: blue;margin:0 auto; opacity:0.9;}
+.img_dialog{width: 50%;height: 100%;float: left;background-repeat: no-repeat;background-size: contain;}
 
-
-
-
+.carte_test{width: 7.5vmax;
+    height: 10.5vmax;}
+/*
+.cardDataDialog div{  display: inline-block;  }
+.cardDataDialog div p{  font-size: .5vmax;  margin-top: .2vmax;  }
+.cardDataDialog div span{  font-family: 'trs-million';  font-size: 1.5vmax;  }
+.cardDataDialog h5{  color: rgb(42,194,248);  font-weight: 200;  font-size: 1.2vmax;  margin: 1.2vmax 0 .6vmax 0;  }
+.cardDataDialog div:nth-child(2){  color: rgb(42,194,248);  }
+.cardDataDialog div:nth-child(3){  color: rgb(245,32,106);  margin: 0 4vmax 0 4vmax;  }
+.cardDataDialog div:nth-child(4){  color: rgb(103,204,50);  }*/
 
 
 

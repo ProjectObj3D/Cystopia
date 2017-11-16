@@ -214,7 +214,42 @@ function ajax(file, data, fct) {
 
 
 
+jQuery(function($) {
 
+  $('.carte_test').each(function() {
+    //$('#textCardDataA1').text('dsfdsf');
+    
+/*
+    $.data(this, 'dialog', $(this).next('.dialog_carte').dialog({
+        autoOpen: false,  
+        modal: true,
+        width : 800,
+        height : 557,  
+        closeText: 'X', 
+        draggable: false ,
+        position: { my: "center", at: "center" }
+      })
+    );  */
+  }).click(function() { 
+      //$.data(this, 'dialog').dialog('open');
+      var attaque = $(this).data('attaque');
+      var defense = $(this).data('defense');
+      var invocation = $(this).data('invocation'); 
+      $('#textCardDataA1').html('<span>'+invocation+'</span><p>INVOCATION</p>');
+      $('#textCardDataB2').html('<span>'+attaque+'</span><p>ATTAQUE</p>');
+      $('#textCardDataC2').html('<span>'+defense+'</span><p>DEFENSE</p>');
+      $('#dial').css("display", "block").dialog({
+//        autoOpen: false,  
+        modal: true,
+        width : 800,
+        height : 557,  
+        closeText: 'X', 
+        draggable: false,
+        position: { my: "center", at: "center" }
+      });  
+      return false;  
+  });  
+}); 
 
 
 
