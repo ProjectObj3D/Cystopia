@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="cystopia2@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="cystopia2">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="admin_exercice"/>
+    <schema id="4" parent="1" name="admin_exo_correction"/>
+    <schema id="5" parent="1" name="cystopia"/>
+    <schema id="6" parent="1" name="exo_nains"/>
+    <schema id="7" parent="1" name="forum"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="le_chat"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="phpmyadmin"/>
+    <schema id="13" parent="1" name="poo"/>
+    <schema id="14" parent="1" name="portfolio"/>
+    <schema id="15" parent="1" name="streetfighter"/>
+    <schema id="16" parent="1" name="test"/>
+    <table id="17" parent="2" name="carte_modele"/>
+    <table id="18" parent="2" name="carte_tmp"/>
+    <table id="19" parent="2" name="contact"/>
+    <table id="20" parent="2" name="deck"/>
+    <table id="21" parent="2" name="hero_modele"/>
+    <table id="22" parent="2" name="hero_tmp"/>
+    <table id="23" parent="2" name="historique"/>
+    <table id="24" parent="2" name="newsletters"/>
+    <table id="25" parent="2" name="partie"/>
+    <table id="26" parent="2" name="rel_deck_carte"/>
+    <table id="27" parent="2" name="reponse"/>
+    <table id="28" parent="2" name="users"/>
+    <column id="29" parent="17" name="c_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="17" name="c_nom">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="17" name="c_mana">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="17" name="c_attaque">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="33" parent="17" name="c_defense">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="34" parent="17" name="c_type">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="17" name="c_team">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="17" name="c_description">
+      <Position>8</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="17" name="c_src">
+      <Position>9</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <key id="38" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>c_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="18" name="c_tmp_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="40" parent="18" name="c_tmp_nom">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="18" name="c_tmp_attaque">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="18" name="c_tmp_defense">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="18" name="c_tmp_position">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="18" name="c_tmp_carte_model_fk">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="18" name="c_tmp_hero_tmp_fk">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="46" parent="18" name="c_tmp_carte_model_fk">
+      <ColNames>c_tmp_carte_model_fk</ColNames>
+    </index>
+    <index id="47" parent="18" name="c_tmp_hero_tmp_fk">
+      <ColNames>c_tmp_hero_tmp_fk</ColNames>
+    </index>
+    <key id="48" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>c_tmp_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="49" parent="18" name="carte_tmp_ibfk_1">
+      <ColNames>c_tmp_carte_model_fk</ColNames>
+      <RefSchemaName>cystopia2</RefSchemaName>
+      <RefTableName>carte_modele</RefTableName>
+      <RefColNames>c_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="50" parent="18" name="carte_tmp_ibfk_2">
+      <ColNames>c_tmp_hero_tmp_fk</ColNames>
+      <RefSchemaName>cystopia2</RefSchemaName>
+      <RefTableName>hero_tmp</RefTableName>
+      <RefColNames>h_tmp_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="51" parent="19" name="c_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="52" parent="19" name="c_email">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="53" parent="19" name="c_firstname">
+      <Position>3</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="54" parent="19" name="c_lastname">
+      <Position>4</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="55" parent="19" name="c_content">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="19" name="c_valdate">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="57" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>c_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="58" parent="19" name="contact_ibfk_1">
+      <ColNames>c_id</ColNames>
+      <RefSchemaName>cystopia2</RefSchemaName>
+      <RefTableName>reponse</RefTableName>
+      <RefColNames>r_contact_fk</RefColNames>
+    </foreign-key>
+    <column id="59" parent="20" name="d_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="60" parent="20" name="d_nom">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="20" name="d_hero_model_fk">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="20" name="d_user_fk">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="63" parent="20" name="d_hero_model_fk">
+      <ColNames>d_hero_model_fk</ColNames>
+    </index>
+    <index id="64" parent="20" name="d_user_fk">
+      <ColNames>d_user_fk</ColNames>
+    </index>
+    <key id="65" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>d_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="66" parent="20" name="deck_ibfk_2">
+      <ColNames>d_hero_model_fk</ColNames>
+      <RefSchemaName>cystopia2</RefSchemaName>
+      <RefTableName>hero_modele</RefTableName>
+      <RefColNames>h_model_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="67" parent="20" name="deck_ibfk_1">
+      <ColNames>d_user_fk</ColNames>
+      <RefSchemaName>cystopia2</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>u_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="68" parent="21" name="h_model_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="69" parent="21" name="h_model_nom">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="21" name="h_model_pv">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;20&apos;</DefaultExpression>
+    </column>
+    <key id="71" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>h_model_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="72" parent="22" name="h_tmp_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="73" parent="22" name="h_tmp_pv">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="22" name="h_tmp_mana">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="22" name="h_tmp_initiative">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="22" name="h_tmp_user_fk">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="22" name="h_tmp_partie_fk">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="78" parent="22" name="h_tmp_partie_fk">
+      <ColNames>h_tmp_partie_fk</ColNames>
+    </index>
+    <index id="79" parent="22" name="h_tmp_user_fk">
+      <ColNames>h_tmp_user_fk</ColNames>
+    </index>
+    <key id="80" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>h_tmp_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="81" parent="22" name="hero_tmp_ibfk_1">
+      <ColNames>h_tmp_partie_fk</ColNames>
+      <RefSchemaName>cystopia2</RefSchemaName>
+      <RefTableName>partie</RefTableName>
+      <RefColNames>p_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="82" parent="23" name="hist_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="83" parent="23" name="hist_texte">
+      <Position>2</Position>
+      <DataType>varchar(256)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="23" name="hist_date">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="23" name="hist_partie_fk">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="86" parent="23" name="hist_partie_fk">
+      <ColNames>hist_partie_fk</ColNames>
+    </index>
+    <key id="87" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>hist_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="88" parent="23" name="historique_ibfk_1">
+      <ColNames>hist_partie_fk</ColNames>
+      <RefSchemaName>cystopia2</RefSchemaName>
+      <RefTableName>partie</RefTableName>
+      <RefColNames>p_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="89" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="90" parent="24" name="email">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="24" name="valdate">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="92" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="93" parent="25" name="p_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="94" parent="25" name="p_date">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="95" parent="25" name="p_tour">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="96" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>p_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="97" parent="26" name="d_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="98" parent="26" name="c_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="99" parent="26" name="c_id">
+      <ColNames>c_id</ColNames>
+    </index>
+    <key id="100" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>d_id
+c_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="101" parent="26" name="rel_deck_carte_ibfk_2">
+      <ColNames>d_id</ColNames>
+      <RefSchemaName>cystopia2</RefSchemaName>
+      <RefTableName>deck</RefTableName>
+      <RefColNames>d_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="102" parent="26" name="rel_deck_carte_ibfk_1">
+      <ColNames>c_id</ColNames>
+      <RefSchemaName>cystopia2</RefSchemaName>
+      <RefTableName>carte_modele</RefTableName>
+      <RefColNames>c_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="103" parent="27" name="r_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="104" parent="27" name="r_sujet">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="27" name="r_content">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="106" parent="27" name="r_date">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="107" parent="27" name="r_contact_fk">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="108" parent="27" name="r_contact_fk">
+      <ColNames>r_contact_fk</ColNames>
+    </index>
+    <key id="109" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>r_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="110" parent="28" name="u_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="111" parent="28" name="u_login">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="112" parent="28" name="u_mdp">
+      <Position>3</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="113" parent="28" name="u_prenom">
+      <Position>4</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="114" parent="28" name="u_nom">
+      <Position>5</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="115" parent="28" name="u_mail">
+      <Position>6</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="116" parent="28" name="u_date_inscription">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="117" parent="28" name="u_hero_tmp_fk">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="118" parent="28" name="u_hero_fk">
+      <ColNames>u_hero_tmp_fk</ColNames>
+    </index>
+    <key id="119" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>u_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="120" parent="28" name="users_ibfk_1">
+      <ColNames>u_hero_tmp_fk</ColNames>
+      <RefSchemaName>cystopia2</RefSchemaName>
+      <RefTableName>hero_tmp</RefTableName>
+      <RefColNames>h_tmp_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+  </database-model>
+</dataSource>
