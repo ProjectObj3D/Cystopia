@@ -232,7 +232,7 @@ function ajax(file, data, fct) {
 
 jQuery(function($) {
 
-  $('.carte_test').each(function() {
+  $('.carteFront').each(function() {
     //$('#textCardDataA1').text('dsfdsf');
     
 /*
@@ -248,12 +248,43 @@ jQuery(function($) {
     );  */
   }).click(function() { 
       //$.data(this, 'dialog').dialog('open');
-      var attaque = $(this).data('attaque');
-      var defense = $(this).data('defense');
-      var invocation = $(this).data('invocation'); 
-      $('#textCardDataA1').html('<span>'+invocation+'</span><p>INVOCATION</p>');
-      $('#textCardDataB2').html('<span>'+attaque+'</span><p>ATTAQUE</p>');
-      $('#textCardDataC2').html('<span>'+defense+'</span><p>DEFENSE</p>');
+      var attaque = $(this).find('.carteAttaque').data('attaque');
+      var defense = $(this).find('.carteVie').data('vie');
+      var description = $(this).find('.carteText').data('description');
+      var mana = $(this).find('.carteMana').data('mana');
+      var name_card = $(this).find('.carteNom').data('name');
+      var img = $(this).css('background-image');
+      console.log('attaque = '+ attaque +' ; defense = '+defense+'; description='+description+'; Mana = '+mana+' ; nom carte = '+name_card+' ; lien img =' + img );
+      $('.img_dialog').css('background-image',img);
+
+
+      if($('.dialog_card_description').length)
+      {
+        $('.dialog_card_description').html(description);
+      }
+      else
+      {
+       $('.dialog_content .cardData').last().append($("<div class='dialog_card_description'>"+description+"</div>"));
+      }
+
+      $('h5[name=nom_carte]').html(name_card);
+      $('div[name=mana]').html('<span>'+mana+'</span><p>INVOCATION</p>');
+      $('div[name=attaque]').html('<span>'+attaque+'</span><p>ATTAQUE</p>');
+
+      if(defense != '')
+      {
+        $('div[name=defense]').html('<span>'+defense+'</span><p>DEFENSE</p>');         
+      }
+      else
+      {
+        $('div[name=defense] span').replaceWith(" ");
+        $('div[name=defense] p').replaceWith(" ");
+      }
+
+      // $('#textCardDataA1').html('<span>'+mana+'</span><p>INVOCATION</p>');
+      // $('#textCardDataB2').html('<span>'+attaque+'</span><p>ATTAQUE</p>');
+      // $('#textCardDataC2').html('<span>'+defense+'</span><p>DEFENSE</p>');
+      
       $('#dial').css("display", "block").dialog({
 //        autoOpen: false,  
         modal: true,
@@ -261,7 +292,6 @@ jQuery(function($) {
         height : 557,  
         closeText: 'X', 
         draggable: false,
-        position: { my: "center", at: "center" }
       });  
       return false;  
   });  

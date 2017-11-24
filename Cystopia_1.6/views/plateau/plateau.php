@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/plateau.css">
     <script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 
-        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="assets/js/plateau.js"></script>
 </head>
 	<body>
@@ -42,7 +42,7 @@
 				<td id="col4" colspan="2">
                     <div class="cardData" id="cardData1">
                         <h5>MOTOKO</h5>
-                        <div  id="textCardDataA1"><span>3</span><p>INVOCATION</p></div>
+                        <div name="invoc" id="textCardDataA1"><span>3</span><p>INVOCATION</p></div>
                         <div id="textCardDataB1"><span>5</span><p>ATTAQUE</p></div>
                         <div id="textCardDataC1"><span>3</span><p>DEFENSE</p></div>
                     </div>
@@ -109,13 +109,13 @@
                             foreach ($pioche as $i => $value)
                             {
                                 echo '<div style="background-image: url(\'assets/'.$pioche[$i]->getSrc().'\')" class="carteFront handplayer" id="hero2carte'.$i.'">
-                                         <div class="carteNum carteMana">'.$pioche[$i]->getMana().'</div>
-                                         <div class="carteNum carteAttaque">'.$pioche[$i]->getAttaque().'</div>';
+                                         <div data-mana="'.$pioche[$i]->getMana().'" class="carteNum carteMana">'.$pioche[$i]->getMana().'</div>
+                                         <div data-attaque="'.$pioche[$i]->getAttaque().'"class="carteNum carteAttaque">'.$pioche[$i]->getAttaque().'</div>';
 
-                                        if ($pioche[$i]->getType() !== 2) echo '<div class="carteNum carteVie">'.$pioche[$i]->getDefense().'</div>';
+                                        if ($pioche[$i]->getType() !== 2) echo '<div class="carteNum carteVie" data-vie="'.$pioche[$i]->getDefense().'">'.$pioche[$i]->getDefense().'</div>';
                                          
-                                         echo '<div class="carteData carteNom">'.$pioche[$i]->getNom().'</div>
-                                         <div class="carteData carteText">'.$pioche[$i]->getDescription().'</div>
+                                         echo '<div data-name="'.$pioche[$i]->getNom().'"class="carteData carteNom">'.$pioche[$i]->getNom().'</div>
+                                         <div data-description="'.$pioche[$i]->getDescription().'"class="carteData carteText">'.$pioche[$i]->getDescription().'</div>
                                       </div>';
                             }
                         ?>
@@ -123,14 +123,27 @@
                 </td>
 				<td colspan="2">
                     <div class="cardData" id="cardData2">
-                        <h5>BIG DADDY</h5>
-                        <div  id="textCardDataA2"><span>5</span><p>INVOCATION</p></div>
-                        <div id="textCardDataB2"><span>2</span><p>ATTAQUE</p></div>
-                        <div id="textCardDataC2"><span>8</span><p>DEFENSE</p></div>
+                        <h5 name="nom_carte" id="name_cardData"></h5>
+                        <div name="mana" id="textCardDataA2"></div>
+                        <div name="attaque" id="textCardDataB2"></div>
+                        <div name="defense" id="textCardDataC2"></div>
                     </div>
                 </td>
 			</tr>
 		</table>
-
+        <div id="dial" style='display: none'>
+            <div class="dialog_carte">
+                <img class="img_dialog" style="background-size: contain;">
+                <div class="dialog_content">
+                    <img style="">
+                   <div class="cardData" id="cardData1" style="position: relative !important;">
+                        <h5 name="nom_carte" id="name_cardData"></h5>
+                        <div name="mana" id="textCardDataA1"></div>
+                        <div name="attaque" id="textCardDataB1"></div>
+                        <div name="defense" id="textCardDataC1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 	</body>
 </html>

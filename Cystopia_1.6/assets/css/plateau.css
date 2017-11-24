@@ -120,6 +120,20 @@ tr, td{
 .cardData div:nth-child(3){  color: rgb(245,32,106);  margin: 0 4vmax 0 4vmax;  }
 .cardData div:nth-child(4){  color: rgb(103,204,50);  }
 
+
+/* Style pop up description carte */
+.ui-droppable{cursor:pointer;}
+.dialog_carte{width: 40vmax !important;height: 28vmax !important;position:absolute!important;background-color: #20557d;margin:0 auto; opacity:0.9;}
+.img_dialog{width: 50%;height: 100%;float: left;background-repeat: no-repeat;background-size: contain;}
+.dialog_content{width: 50%;float:right;}
+.carte_test{width: 7.5vmax;
+    height: 10.5vmax;}
+
+.dialog_card_description{font-size: 10em;padding: 20px;}
+.dialog_carte .cardData{width: 20.8vmax;}
+
+.ui-dialog{top:190px!important;position:absolute!important;}
+
 /*Style Carte Creature*/
 
 .carteFront{
