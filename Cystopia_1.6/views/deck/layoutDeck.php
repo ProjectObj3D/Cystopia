@@ -12,7 +12,10 @@
     <body class='body'>
         <nav class="navbar">
             <?= $titre ?>
-            <a class="navbar-brand " href="?logout=1" name="deconectMenu" ><i class="fa fa-sign-out"></i></a>
+            <div class="icon-nav">
+                <a class="navbar-brand  my_account" href="?control=user&action=display" name="mon_compte"><i class="fa fa-user" aria-hidden="true"></i></a>
+                <a class="navbar-brand" href="?logout=1" name="deconectMenu" ><i class="fa fa-sign-out"></i></a>
+            </div>
         </nav>
         <?=$view?>
     </body>
