@@ -1,0 +1,1006 @@
+@font-face{
+	font-family : "BankGothic Lt BT";
+	src : url("fonts/bgothl.ttf") format('ttf'),
+		  url("fonts/bgothl.woff") format('woff');
+}
+@font-face{
+	font-family : "Leelawadee UI";
+	src : url("fonts/LeelawUI.ttf") format('ttf'),
+		  url("fonts/LeelawUI.woff") format('woff');
+}
+body{
+	/*font-size: 0;*/
+	padding: 0;
+	margin: 0;
+	background: black;
+}
+section {
+	margin:0;
+	padding: 0;
+	max-width: 1920px;
+}
+
+
+
+
+
+/******* Section Haut **************/
+.sectionHaut{
+	margin: 0 auto;
+	height: 1080px;
+	background: url('assets/bg.jpg') no-repeat center;
+	background-size: cover;
+
+	
+}
+
+.imgLogo {
+	background: url("assets/Logo.png") no-repeat;
+	width: 802px;
+	margin:0 auto;
+	height: 300px;
+
+}
+
+.conteneurLogo{
+	/*width: 50%;*/
+	margin: 50px auto 60px;
+	text-align: center;
+}
+
+.annonce{
+	text-align: center;
+	/*width: 50%;*/
+	margin:0 auto;
+	//transform: translate(40%,100px);
+	animation:animeSpan 4s ease-in-out infinite alternate ;
+}
+.spanHaut{
+	position: relative;
+	font-family:"BankGothic Lt BT";
+	text-align: center;
+	font-size: 30px;
+	text-shadow: 0px 21px 1px grey;;
+	animation:animeSpan 2s ease-in-out infinite alternate ;
+	//border : solid 2px red;
+	
+}
+
+.spanBas{
+	position: relative;
+	font-family:"BankGothic Lt BT";
+	text-align: center;
+	font-size: 30px;
+	
+	text-shadow: 0px 21px 1px grey;
+	animation:animeSpan 4s ease-in-out infinite alternate ;
+}
+
+
+.logoCentreAutour{
+	display: inline-block;
+}
+
+.logoCentreAutourDroite{
+	display: inline-block;
+	float: right;
+}
+
+.conteneurMain{
+	position: relative;
+	margin-top: 110px;
+	//background-color: purple;
+		
+}
+
+.imageCentreLueur{
+	position: absolute;
+	top:-45px;
+	text-align: center;
+}
+
+.imgLogoGaucheHaut,.imgLogoDroiteManga,.imgHexagoneDroiteCache,.imgHexagoneGaucheCache{
+	display:none;
+}
+
+
+.imgLogoGaucheBas:active ~.imgLogoGaucheHaut{
+	position: absolute;
+	margin:-320px 17px;
+	display: block;
+}
+
+.imgLogoDroite:active ~.imgLogoDroiteManga{
+	display: block;
+	position: absolute;
+	//margin:-185px 223px;
+	right:6px;
+	top:-50px;
+}
+
+
+
+
+.imgHexagoneDroite{
+	
+	width: 173px;
+	height: 157px;
+	transition:2s ease-in-out;
+	background: url('assets/IconeGSansEffets.png') no-repeat;
+	//animation:animeLogoDroite 2s ease-in-out infinite alternate ;
+}
+
+.imgHexagoneDroite:hover{
+	transform: scale(1.2);
+	background: url('assets/IconeGAvecEffets.png') no-repeat;
+}
+
+.imgHexagoneGauche{
+	
+	width: 173px;
+	height: 157px;
+	background: url('assets/MangaIconeSansEffets.png') no-repeat;
+	transition:2s ease-in-out;
+}
+
+.imgHexagoneGauche:hover{
+	transform: scale(1.2);
+	background: url('assets/MangaIconeAvecEffets.png') no-repeat;
+}
+
+.imgLogoGaucheBas,.imgLogoDroite{
+		position: relative;
+		margin-top: -55px;
+		cursor: pointer;
+}
+
+
+.logoHexagone {
+	width: 70%;
+	margin:55px auto;
+}
+.imgHexagoneGauche {
+	float: left;
+}
+
+.imgHexagoneDroite,.imgHexagoneDroiteCache {
+	float: right;
+}
+
+.imgLogoDroite{
+	position: relative;
+	float: right;
+}
+
+@keyframes animeSpan {
+	0% {
+		transform:rotate3d(10,-10,10,4deg);
+		transform: scale(0.8, 1);
+	}
+
+	100% {
+		transform:rotate3d(-10,0,0,-4deg);
+		transform: scale(1, 1.2);
+	}
+
+}
+
+
+@keyframes animeLogoGauche {
+	100% {
+		background: url('assets/MangaIconeSansEffets.png') no-repeat;
+		transform: translate(10px);
+	}
+	
+	0%{
+		background: url('assets/MangaIconeAvecEffets.png') no-repeat;
+		transform: translate(-10px);
+	}
+}
+
+@keyframes animeLogoDroite {
+	0% {
+		background: url('assets/IconeGSansEffets.png') no-repeat;
+		transform: translate(-10px);
+	}
+	
+	100%{
+		background: url('assets/IconeGAvecEffets.png') no-repeat;
+		transform: translate(10px);
+	}
+}
+
+
+/*classes pour l'écriture */
+.colorBlueHaut{
+	color:#2e9ed8;
+}
+.colorBlueMilieu{
+	color:#2d9bd3;
+}
+.colorBlueBas{
+	color:#1d9cdc;
+	opacity: 0.75;
+}
+
+.colorWhite{
+	color:white;
+}
+
+
+
+
+/****************   Section millieu ***********************/
+
+.section_middle{
+	position: relative;
+	/*height: 1037px;*/
+    /*height: 1080px;*/
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	background-image: url('images/fond_propos.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.contentMiddle {
+	width: 100%;
+	margin:0 auto;
+}
+.hexagon{
+	background-image: url('images/hexagon.png');
+	background-repeat: no-repeat;
+	width: 318px;
+	height: 275px;
+	margin:0 auto;
+	position: absolute;
+}
+.un{
+	margin-left: 65px;
+}
+.deux{
+	margin-top: 285px;
+	margin-left: 65px;
+}
+.trois{
+	margin-top: 143px;
+  margin-left: 315px;
+}
+.trois .text_hexa{
+  margin-left:55px;
+  margin-top: 74px;
+}
+.quatre{
+	margin-top: 285px;
+  margin-left: 565px;
+}
+.quatre .text_hexa{
+  margin-top: 74px;
+}
+.cinq{
+	margin-top: 570px;
+    margin-left: 565px;
+}
+.cinq .text_hexa{
+      margin-top: 23px;
+    margin-left: 54px;
+}
+.img_gauche,.div_middle,.img_droite{
+	display: inline-block;
+
+}
+.img_droite{
+	vertical-align: top;
+}
+.img_gauche{
+	/*margin-bottom: -48px;*/
+	vertical-align: bottom;
+}
+.text_hexa d{
+	color:white;
+
+}
+.text_hexa{
+	color : #2e9ed8;
+	font-size: 2em;
+	margin-top: 42px;
+  margin-left: 48px;
+  line-height: 33px;
+  font-family: "Leelawadee UI";
+  position: absolute;
+}
+.title{
+  font-size: 72px;
+     margin: 0 0 10px 0;
+   font-family: "BankGothic Lt BT";
+}
+.div_middle{
+	width: 50%;
+  height: 950px;
+  position: relative;
+}
+/*.img_droite{
+	float: right;
+}*/
+
+.dispo{
+  position: absolute;
+  bottom: 105px;
+  font-family: "BankGothic Lt BT";
+}
+.dispo .colorBlueMilieu{
+    font-size: 40px;
+}
+.dispo .url{
+  font-size: 24px;
+  margin-top:20px;
+}
+.dispo p{
+  color:white;
+  margin:0;
+  font-size: 50px;
+}
+.icon_social{
+  margin : 0 0 5px 5px;
+}
+.icon_social i{
+  margin: 0 15px 0 15px;
+  font-size: 60px;
+  color:white;
+  cursor: pointer;
+}
+.icon_social i:hover{
+  color : #2d9bd3;
+}
+.transition_bas{
+  background-image: url('images/transition-bas.png');
+  width: 100%;
+  height: 43px;
+  margin-top: -46px
+}
+.transition_haut{
+  background-image: url('images/transition-haut.png');
+  width: 100%;
+  height: 43px;
+
+}
+.clear{
+  clear:both;
+}
+
+
+/************************* RESPONSIVE ***************************************/
+
+/*@media only screen and (max-device-width : 1050px){
+    
+    .div_middle{
+    width: 55%;
+    margin : 0 auto;
+  }
+    .transition_bas,.dispo{
+    bottom: 0;
+  }
+  .dispo {
+  	margin-bottom: 100px;
+  }
+}
+*/
+
+
+
+/* Portable */
+@media only screen and (max-device-width : 550px) {
+  
+  .section_middle{
+  	/*display: none;*/
+    background : none;
+  }
+  .icon_social i{
+    font-size:  30px;
+  }
+  .un,.deux,.trois,.quatre,.cinq{
+    position: relative;
+    margin : 10px auto;
+  }
+  .dispo{
+    position: relative;
+  }
+
+  .div_middle {
+  	height: 300px;
+  }
+  .hexagon {
+  	display: none;
+  }
+  .imgHexagoneDroite, .imgHexagoneGauche {
+  	display: none;
+  }
+  
+
+}
+
+
+
+
+/* Tablette (portrait et paysage) ----------- */
+@media only screen and (max-device-width : 920px) {
+
+    .un,.deux,.trois,.quatre,.cinq{
+    /*float:left;*/
+    position: initial;
+    margin : 10px auto;
+  }
+  .dispo{
+    position: initial;
+    padding-top:100px;
+    padding-bottom: 100px;
+    margin-top: -50px;
+  }
+  .img_gauche {
+    display: none;
+  }
+  .imgLogo {
+  	width: 252px;
+	background: url("assets/mini_logo.png") no-repeat;
+	
+  }
+
+}
+
+
+/* Petit écran et ordinateur portable ----------- */
+@media only screen and (max-device-width : 1850px) {
+	
+  .img_droite {
+    display: none;
+  }
+  .img_gauche {
+    float:left;
+  }
+
+}
+
+/********** Section Bas *********************/
+
+.sectionBas{
+	padding-bottom: 30px; 
+	margin:0 auto;
+	font-size: 0;
+	width: 100%;
+	/*min-width: 470px;*/
+	background: url('images/bckg.png') no-repeat top center;	
+	background-size: cover;
+}
+.wrapper{
+	padding-top: 40px; 
+	margin: 0 auto 0;
+	position: relative;
+	width: 697px;
+	height: 400px;
+}
+#hex1{
+	display: inline-block;
+	margin-right: 22px;	
+	height: 200px;
+}
+#hex3{
+	padding-top: 8px;
+	height: 90%;
+	width: auto;	
+}
+#texIns{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 10px;
+	height: 200px;
+}
+#inscription{
+	padding-top: 20px;
+	text-align: right;
+	position: relative;
+	right: 68%;
+	width: 778px;
+}
+#inscription h4{
+	margin: 0;
+	font-family: "BankGothic Lt BT";
+	font-size: 64px;
+	font-weight: 200;
+	color: rgb(29,156,220);
+	letter-spacing: 4px;
+	text-shadow: 4px 4px #020e16;
+}
+#inscription p{
+	font-family: "BankGothic Lt BT";
+	font-size: 26px;
+	font-weight: 200;
+	color: rgba(255,255,255,.9);
+	margin: 0;
+    position: relative;
+    bottom: 12px;
+    text-shadow: 4px 4px #020e16;
+}
+#midForm{
+	width: 698px;
+	margin: auto;
+	position: relative;
+	bottom: 36px;
+}
+.tr1_LDef{
+	width: 0px;
+	height: 142px;
+	border-left: 2px solid rgb(20,102,138);
+	display: inline-block;
+	position: relative;
+	bottom: 59px;	
+}
+.tr2_LDef{
+	display: inline-block;
+	position: relative;
+	bottom: 59px;
+	width: 160px;
+	height: 0px;
+	border-bottom: 2px solid rgb(20,102,138);
+}
+
+.tr1_RDef{
+	display: inline-block;
+	position: relative;
+	bottom: 59px;
+	width: 160px;
+	border-top: 2px solid rgba(32,162,215,.6);
+}
+.tr2_RDef{
+	display: inline-block;
+	position: relative;
+	top: 56px;
+	height: 117px;
+	border-right: 2px solid rgba(32,162,215,.6);
+}
+.dot1Def{
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: rgb(20,109,156);
+	position: relative;
+	right: 5px;
+}
+#midRecWrap{
+	display: inline-block;
+	position: relative;
+	bottom: 5px;
+	width: 374px;
+	height: 110px;
+	background: url('images/cdr1.png') no-repeat left / contain,
+				url('images/cdr2.png') no-repeat right / contain;
+}
+#blueRec{
+	margin: 13px auto 0;
+	width: 322px;
+	height: 80px;
+	background-color: rgba(32,162,215,.25);
+	border-radius: 8px;
+	border: 2px solid rgb(64,187,227);
+}
+#inMail{
+	margin-top: 22px;
+	width: 262px;
+	height: 27px;
+	border-radius: 10px;
+	padding-left: 3px;
+	font-size: 18px;
+	font-weight: 600;
+	border-bottom: 2px solid rgb(57,119,140);
+	border-right: 2px solid rgb(57,119,140);
+	border-top: 2px solid rgb(3,16,22);
+	border-left: 2px solid rgb(3,16,22);
+}
+#newsForm{
+	position: absolute;
+	left: 50px;
+	height: 130px;
+	width: 271px;
+}
+#fils{
+	width: 100%;
+	height: 342px;
+	background: url('images/test.png'), url('images/tgrid.png');
+	background-size: 2400px, 700px;
+	background-position:  bottom center, left 58px;
+	background-repeat: no-repeat;
+}
+.subMailDef{
+	font-family: "BankGothic Lt BT";
+	font-size: 30px;
+	color: rgb(24,135,191);
+	background: none;
+	border: none;
+	margin: 40px auto 0;
+	width: 271px;
+}
+#msgWrap{
+	height: 164px;
+	width: 321px;
+	position: relative;
+	bottom: 19px;
+	left: 100%;
+}
+.tr3_RDef{
+	display: inline-block;
+	position: relative;
+	border-bottom: 2px solid rgba(32,162,215,.6);
+	width: 30px;
+	bottom: 85px;
+}
+.dot2Def{
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: rgb(20,109,156);
+	position: relative;
+	display: inline-block;
+	bottom: 83px;
+}
+.msgDef{
+	display: inline-block;
+	margin-left: 24px;
+	height: 164px;
+	width: 240px;
+	position: relative;
+	font-family: "BankGothic Lt BT";
+	font-size: 21px;
+	color: rgba(24,135,191, .9);
+	line-height: 28px;
+}
+#hexR{
+	/*width: 158px;*/
+	height: 330px;
+	float:right;
+	margin-right: 50px;
+}
+#hex4{
+	height: 90%;
+	width: auto;
+}
+.reset{
+	font-size: 15px;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	height: 150px;
+	width: 350px;
+}
+#rez{
+	font-size: 19px;
+	color: white;
+}
+#popWrap{
+	width: 441px;
+	margin: auto;
+	position: relative;
+}
+#formPopUp{
+	display: none;
+	width: 438px;
+	height: 618px;
+	position: absolute;
+	bottom: -10px;
+	background-color: black;
+}
+.bckgA{
+	background-image: url('images/bckgPop.png'); 
+	background-repeat: no-repeat;
+	background-size: 438px 618px;
+}
+.bckgB{
+	background-image: url('images/carte.png');
+	background-repeat: no-repeat;
+	background-size: 438px 618px;
+}
+
+#popForm{
+	font-family: "BankGothic Lt BT";
+	font-size: 22px;
+	color: rgb(23,125,176);
+	padding: 45px 25px 0 45px;
+}
+
+#fermer{
+	float: right;
+}
+#fermer i{
+	font-size: 17px;
+	color: white;
+	margin: 1px 4px 0 0 ;
+}
+
+#popForm p{ display: table-row; }
+.lab{ display: table-cell; }
+.inPop{
+	margin: 0 0 54px 15px;
+	width: 223px;
+	height: 22px;
+	border-radius: 9px;
+	border: 1px solid rgb(27,138,183);
+	font-size: 14px;
+	font-weight: 600;
+	padding-left: 5px;
+}
+#popForm textarea{
+	font-family: "BankGothic Lt BT";
+	font-size: 18px;
+	width: 361px;
+	height: 250px;
+	margin: 10px 0 0 -13px;
+	border-radius: 10px;
+	border: 3px solid rgb(93,208,237);
+	resize: none;
+	background-color: rgba(255,255,255,.8);
+	box-shadow: 2px 2px rgb(0,0,0) inset;
+	padding: 10px 0 0 10px;
+}
+.envoyez{
+	font-family: "BankGothic Lt BT";
+	font-size: 30px;
+	color: rgb(26,138,195);
+	text-shadow: 0 0px 4px rgb(26,138,195), 5px 4px rgb(5,24,32);
+	background-color: rgb(8,41,54);
+	border: 2px solid rgb(75,195,231);
+	border-radius: 10px;
+	width: 296px;
+	height: 47px;
+	position: absolute;
+	bottom: -62px;
+	left: 72px;
+	text-align: center;
+	cursor: pointer;
+}
+
+/*FOOTER*/
+
+#footerSectionBas{
+	padding-top: 25px;
+	width: 100%;
+	background: url('images/cystopia.png') no-repeat right 40px top 30px;
+}
+#contact{
+	display: block;
+	text-decoration: none;
+	margin: auto;
+	width: 264px;
+	height: 40px;
+	font-family: "BankGothic Lt BT";
+	font-size: 30px;
+	color: rgb(25,133,187);
+	text-shadow: 5px 4px rgb(5,24,32);
+	background-color: rgb(8,41,54);
+	border: 2px solid rgb(75,195,231);
+	padding: 3px 15px 0 15px;
+	border-radius: 10px;
+	text-align: center;
+}
+#social{
+	width: 260px;
+	margin: 20px auto 10px;
+	font-size: 44px;
+	color: rgb(216,216,216);
+}
+#social a{
+	color: rgb(216,216,216);
+}
+#fcbk{
+	margin-right: 26px;
+}
+#twt{
+	border-right: 2px solid rgb(216,216,216);
+	border-left: 2px solid rgb(216,216,216);
+	padding: 0 37px;
+}
+#inst{
+	margin-left: 30px;
+}
+.show{
+	display: none;
+}
+#mentions{
+	display: block;
+	font-family : "Leelawadee UI";
+	font-size: 16px;
+	color: rgb(45,155,211);
+	width: 593px;
+	margin: auto;
+}
+
+/*	CLASSES APPELEES EN JS       
+
+FOCUS INPUT :*/                                    
+
+.subMailFocus{
+	border: 2px solid rgb(32,162,215); 
+	color: rgb(32,162,215); 
+	font-size: 26px;
+	padding-bottom: 2px;
+	box-shadow: 0 0 8px rgb(32,162,215);
+	text-shadow: 0 0 6px rgb(32,162,215));
+	cursor: pointer; 
+	letter-spacing:2px;
+}
+.tr1_LFocus{
+	box-shadow: 0 0 10px rgb(31,156,207); 
+	border-left: 2px solid rgb(31,156,207);
+}
+.tr2_LFocus{
+	box-shadow: 0 0 10px rgb(31,156,207); 
+	border-bottom: 2px solid rgb(31,156,207);
+}
+.dot1Focus{
+	box-shadow: 0 0 10px rgb(31,156,207); 
+	background-color: rgb(31,156,207);
+}
+
+
+/*STATUT: REFUSE*/
+
+
+#refuse{
+	letter-spacing:4px;
+}
+#redRec{
+	border: 2px solid rgb(246,52,121);
+	border-radius: 8px;
+	background-color: rgb(64,13,31); 
+	color: rgb(255,51,122);
+	font-size:36px; 
+	font-family: "BankGothic Lt BT";
+	text-align:center; 
+	text-shadow: 0 0 6px rgb(255,51,122);
+	margin: 13px auto 0;
+	width: 322px;
+	height: 80px;
+	position: absolute;
+	top:0;
+	right: 24px;
+}
+#redRec *{
+	text-decoration: none;
+	color: rgb(255,51,122);
+}
+
+/*STATUT: CONFIRME*/
+
+.subMailConf{
+	font-size: 20px; 
+	border: 2px solid rgb(9,45,61); 
+	padding-top: 2px; 
+	color: rgb(9,45,61);
+}
+#confirmRec{
+	border: 2px solid rgb(75,195,231);
+	border-radius: 8px;
+	background-color: rgb(10,50,70); 
+	color: rgb(75,195,231);
+	font-size:36px; 
+	font-family: "BankGothic Lt BT";
+	text-align:center; 
+	text-shadow: 0 0 6px rgb(75,195,231);
+	margin: 13px auto 0;
+	width: 322px;
+	height: 80px;
+	position: absolute;
+	top:0;
+	right: 24px;
+}
+.subMailConf{
+	font-size: 22px; 
+	border: 2px solid rgb(9,45,61); 
+	padding-top: 2px; 
+	color: rgb(9,45,61);
+}
+.tr1_RConf{
+	box-shadow: 0 0 10px rgb(31,156,207); 
+	border-top: 2px solid rgb(31,156,207); 
+	width: 160px;
+}
+.tr2_RConf{
+	box-shadow: 0 0 10px rgb(31,156,207); 
+	border-right: 2px solid rgb(31,156,207); 
+	top:54px;
+	height:115px;
+}
+.tr3_RConf{
+	box-shadow: 0 0 10px rgb(31,156,207); 
+	border-bottom: 2px solid rgb(31,156,207); 
+	bottom:87px;
+}
+.dot2Conf{
+	box-shadow: 0 0 10px rgb(31,156,207); 
+	background-color: rgb(31,156,207); 
+	bottom:85px;
+}
+.msgConf{
+	color: rgb(75,195,231); 
+	text-shadow: 0 0 10px rgb(75,195,231);
+	right:2px;
+}
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 1540px){
+	.wrapper{ width: 629px; height: 379px; padding-top: 30px; }
+	#inscription{ width: 745px; height: 200px; padding-top: 0px;}
+	#inscription h4{ font-size: 50px; }
+	#inscription p{ font-size: 24px; }
+	#hex3{ height: 78%; width: auto; }
+	#hexR{top: 100px; right: 20px;}
+	#hex4{ height: 75%; width: auto; }
+	.tr1_LDef{ height: 116px; }
+	.tr2_LDef{ width: 113px; }
+	.tr1_RDef{ width: 105px; }
+	.tr2_RDef{ height: 97px; top: 36px;}
+	.tr3_RDef{ width: 21px; bottom: 85px;}
+	.dot1Def{ width: 6px; height: 6px; right: 4px; }
+	.dot2Def{ width: 6px; height: 6px; bottom: 83px; }
+	#midForm{ width: 497px; height: 128px; }
+	#midRecWrap{ width: 275px; height: 80px; bottom: 21px;}
+	#inMail{ width: 186px; height: 18px; margin: 16px 0 0 4px; font-size: 14px;}
+	#blueRec{ width: 235px ; height: 58px; margin-top: 9px;}
+	#newsForm{ width: 175px; left: 37px}
+	.subMailDef{ width: 200px; font-size: 19px; margin-top: 27px;}
+	#msgWrap{ bottom: 38px; width: 221px;}
+	.msgDef{ font-size: 17px; width: 170px;}
+	#fils{ background-size: 2050px auto, auto 230px; background-position: bottom center, left -9px; height: 242px; }
+	#footerSectionBas{ padding-top: 21px; background-size: 100px; background-position: center right;}
+	#contact{ font-size: 24px; width: 216px; height: 28px; border-radius: 7px; padding-top: 2px;}
+	#social{ width: 192px; margin: 15px auto 7px; font-size: 32px; }
+	#fcbk{ margin-right: 20px; }
+	#twt{ border-right: 2px solid rgb(216,216,216); border-left: 2px solid rgb(216,216,216); padding: 0 28px; }
+	#inst{ margin-left: 20px; }
+	#mentions{ display: block; font-family : "Leelawadee UI"; font-size: 16px; color: rgb(45,155,211); width: 593px; margin: auto; }
+	#redRec, #confirmRec{ width: 235px; height: 58px; right: 18px; margin-top: 9px; font-size: 26px;}
+	.subMailConf{ font-size: 16px; }
+
+	#popWrap{ width: 370px; }
+	#formPopUp{ width: 370px; height: 507px; bottom: -6px; }
+	.bckgA{ background-size: 370px 507px; }
+	.bckgB{ background-size: 370px 507px; }
+	#formPopUp label{ font-size: 18px; }
+	.inPop{ margin: 0 0 42px 15px; width: 177px; height: 18px; border-radius: 8px; font-size: 12px; font-weight: 600; }
+	#popForm textarea{ font-size: 14px; width: 298px; height: 188px; margin: 10px 0 0 -17px; }
+	.envoyez{ font-size: 22px; border-radius: 8px; width: 250px; height: 34px; bottom: -49px; left: 60px; padding-bottom: 2px; }
+	#fermer i{ font-size: 14px !important; }
+}
+@media screen and (max-width: 1125px){
+	#hexR{display: none;}	
+}
+@media screen and (max-width: 910px){
+	#inscription{ height: 145px; }
+	#hex3{display: none;}
+	#formPopUp{ bottom: -6px; }
+	.wrapper{ height: 381px; width: 563px;}
+	.tr1_LDef{ height: 80px; }
+	.tr2_RDef{ height: 125px; top: 64px;}
+	#msgWrap{ left: initial; text-align: center; margin: 0 auto 0; top: 30px; width: 265px;}
+	#msg{ margin: 0; width: 265px; line-height: 22px;}
+	#tr3_R{ position:  absolute; left: 300px; bottom: 130px; width: 79px;}
+	#dot2{ position:  absolute; right: -37px; top: 30px;}
+	.hide{ display: none; }
+	#fils{ background-size: 2050px auto, auto 230px; background-position: bottom center, -200px -9px; height: 242px; }
+}
+@media screen and (max-width: 580px){
+	#fils{ background-size: 2050px auto, auto 230px; background-position: bottom center, -350px -9px; height: 242px; }
+	.show{ display: initial; }
+	#mentions{ text-align: center; width: 294px; margin: auto;}	
+}
+@media screen and (max-width: 320px){
+	.tr2_LDef{ width: 74px; }
+	.tr1_RDef{ width: 78px; }
+	#tr3_R{ width: 46px; }
+	#midForm{ width: 431px; }
+	.wrapper{ width: 473px; }
+	#texIns{ height: 168px; }
+	#inscription{ width: 300px;}
+}
+
+
+

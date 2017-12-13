@@ -1,0 +1,80 @@
+@font-face{
+	font-family : 'BankGothic';
+	src : url('../../assets/fonts/bgothl.ttf') format('truetype'),
+	url('../../assets/fonts/bgothl.woff') format('woff');
+}
+
+html {
+	min-height: 100%;
+}
+
+body{
+	width: 100%;
+	background-image: url(../images/fond_propos.png), url(../images/bckg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: black;
+	text-align: center;
+	font-family : 'BankGothic';
+}
+
+h2
+{
+	padding-top: 10vmax;
+	display: inline-block;
+	color: white;
+}
+
+#deco
+{
+	position: absolute;
+	top: 1.4vmax;
+	right: 2vmax;
+}
+
+.button
+{
+    cursor: pointer;
+}
+
+.container-fluid
+{
+	display: none;
+}
+
+#formModif
+{
+	display: none;
+	width: 200px;
+	margin: auto;
+	background-color: white;
+	border-radius: 5px;
+}
+
+#input1
+{
+	border-top-right-radius: 5px;
+}
+
+
+#monCompte
+{
+	margin-bottom: 50px;
+}
+
+#btnJouer
+{
+	width: 180px;
+	height: 60px;
+	font-size: 25px;
+}
+
+
+
+
+#dataUser
+{
+	width: 250px;
+	border: 1px solid black;
+	padding: 10px;
+}

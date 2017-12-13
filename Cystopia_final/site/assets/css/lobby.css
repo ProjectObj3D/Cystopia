@@ -1,0 +1,30 @@
+@font-face{
+    font-family : 'BankGothic';
+    src : url('../../assets/fonts/bgothl.ttf') format('truetype'),
+    url('../../assets/fonts/bgothl.woff') format('woff');
+}
+
+
+html {
+    min-height: 100%;
+}
+
+body{
+    background-color: black;
+    background-image: url("../images/bckg.png"), url("../images/bckg2.png");
+    background-repeat: no-repeat;
+    background-position: 0 -3vmax, 0 15vmax;
+    background-size: contain, contain;
+}
+
+#attente{
+    font-family : 'BankGothic';
+    font-size: 1vmax;
+    color: white;
+    width: 16vmax;
+    margin: 25vmax auto 0;
+}
+
+#erreur{
+    color: red;
+}

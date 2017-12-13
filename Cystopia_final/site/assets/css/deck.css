@@ -1,0 +1,370 @@
+@font-face{
+	font-family : 'BankGothic';
+	src : url('../../assets/fonts/bgothl.ttf') format('truetype'),
+	url('../../assets/fonts/bgothl.woff') format('woff');
+}
+
+.body{
+
+
+  width: 100%;
+  background-image: url(../images/fond_propos.png), url(../images/bckg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  font-weight:200;
+  padding-top: 90px;
+  //color:#666666;
+	color : #d9534f;
+  background-color: black;
+
+}
+
+.droite{
+	float:right;
+}
+
+
+/*a{*/
+	/*text-decoration: none;*/
+	/*color : #666666;*/
+/*}*/
+.carte_dos{
+
+	width: 140px;
+	height: 194px;
+	background: url('') no-repeat center / contain;
+	display: inline-block;
+	position: relative;
+	color:white;
+	text-align: center;
+	margin:55px 8px 40px 8px;
+    border-radius: 14px;
+    background-color: white;
+    /*box-shadow: 8px 8px 5px #656565;*/
+}
+
+.labelSpan .carte_dos {
+	position: static !important;
+}
+
+.carte_super{
+
+	width: 140px;
+	height: 194px;
+	background: url('') no-repeat center / contain;
+	display: inline-block;
+	/*position: absolute;*/
+	color:white;
+	text-align: center;
+	margin: 15px 8px 40px 8px;
+    border-radius: 14px;
+    background-color: white;
+    /*box-shadow: 8px 8px 5px #656565;*/
+
+}
+
+
+.carte_hero{
+
+	width: 254px;
+	height: 350px;
+	background: url('../heros/seiya.png') no-repeat center / contain;
+	display: inline-block;
+	/*position: absolute;*/
+	color:white;
+	text-align: center;
+	margin: 4vw ;
+    border-radius: 14px;
+    background-color: white;
+    /*box-shadow: 8px 8px 5px #656565;*/
+    font-size: 2em;
+}
+
+.nomHero{
+	color:grey;
+	border:2px solid grey;
+	margin-bottom:-55px;
+}
+
+.container_deck{
+	width: 80vw;
+	/*height: 40vh;*/
+	margin:  auto;
+	border:3px solid #666666;
+	padding: 20px;
+	font-size: 0.85em;
+	font-family : 'BankGothic';
+
+
+}
+
+a{
+	color:red;
+	text-decoration: none;
+	//margin: auto;
+	text-decoration-line: none;
+
+}
+
+.nomCarteDeck{
+	position: relative;
+    //bottom: -200px;
+    //border: solid #666666 2px;
+    //margin: 5px auto;
+    color: #666666;
+    //padding: 3px;
+	margin-top: -40px;
+	//text-decoration: none;
+}
+
+.nomCarteDeckChoix{
+	position: relative;
+//bottom: -200px;
+//border: solid #666666 2px;
+//margin: 5px auto;
+	color: #666666;
+//padding: 3px;
+	//margin-top: -40px;
+}
+
+.labelSpan{
+	font-size: 20px;
+	text-align : center;
+	display: inline-block;
+}
+
+.labelSpanChoix{
+	font-size: 20px;
+    text-align: center;
+    //display: inline-block;
+    position: relative;
+    top: -38px;
+	color: #296b9f;
+}
+
+.choixHero{
+	/*border: 2px solid red;*/
+	width: 35%;
+	display: inline-block;
+}
+
+.nomCarteHero{
+	position: relative;
+	width: 254px;
+    bottom: 50px;
+    margin: auto;
+    border: solid #666666 2px;
+
+    color: #666666;
+    font-weight: bold;
+    padding: 4px auto;
+    font-size: 0.8em;
+}
+
+.new_deck{
+	border:solid 3px white;
+	padding: 15px;
+	text-align: center;
+	width: 80vw;
+	margin:10px auto;
+	color:white;
+	font-family : 'BankGothic';
+}
+
+.navbar{
+	width: 80vw;
+	margin: auto;
+	margin-bottom: 15px;
+	background-color: white;
+
+	position: relative;
+    //min-height: 50px;
+    line-height: 44px;
+    font-size: 25px;
+    padding: 10px 5px;
+	font-family : 'BankGothic';
+}
+
+.white{
+	color:white;
+}
+
+.centrer{
+	text-align: center;
+	color:grey;
+}
+
+.input_choix{
+	position: relative;
+	//right:-15px;
+	visibility: hidden;
+}
+
+.nomType{
+	color : white;
+	font-size:  26px;
+}
+
+.rouge{
+	border:2px solid red;
+	color : red;
+	padding:5px 8px ;
+	border-radius: 5px;
+	margin:auto;
+	//width:80%;
+	text-align: center;
+	display: none;
+	font-size: 18px;
+
+}
+
+.bleue{
+	border:2px solid #29b2ff;
+	color : #29b2ff;
+	padding:5px 8px ;
+	border-radius: 5px;
+	margin:auto;
+	//width:80%;
+	text-align: center;
+	display: none;
+	font-size: 18px;
+}
+
+.borderValide{
+	border:4px solid #29b2ff;
+}
+
+
+.ValideBorderGreen
+{
+	border:5px solid green;
+}
+
+.new_deck{
+	//display: none;
+}
+
+#idErreurNomDeck{
+	margin:15px;
+}
+ margin : 0 15px;
+}
+
+#idNomDeck{
+	color : grey;
+}
+
+.fauxinput{
+	display:none;
+}
+.btn{
+	margin:  2px;
+}
+
+.nomType{
+	margin: 20px;
+}
+
+hr{
+	color : blue
+	width: 60%;
+
+}
+.superHeros{
+	display: none;
+}
+
+.fa-search-plus{
+	color: silver;
+	right: -67px;
+	top: -7px;
+	position: relative;
+	size: 30px;
+}
+
+.tailleLayout{
+	font-size: 25px;
+}
+
+.carte_dos *{
+    position: absolute;
+}
+
+.carteNum{
+    font-family: 'trs-million';
+    text-shadow: .06vmax .06vmax #0f0f0f;
+    text-align: center;
+}
+
+
+.carteMana{
+	top: 15px;
+    color: rgb(42,194,248);
+}
+.carteAttaque{
+    top: 42px;
+    color: rgb(245,32,106);
+}
+.carteVie{
+    top: 67px;
+    color: rgb(103,204,50);
+}
+.carteVie,.carteMana,.carteAttaque{
+	left:19px;
+}
+.carteNom{
+    text-align: center;
+    font-family: 'ConthraxSb';
+    text-transform: uppercase;
+    text-shadow: .06vmax .06vmax #0f0f0f;
+    font-size: 9px;
+    color: rgb(42,194,248);
+    bottom: 57px;
+    left: 49px;
+}
+
+.carteText{
+    font-family: 'GeosansLight';
+    text-align: center;
+    color: rgb(42,194,248);
+    font-size: 8px;
+    font-weight: 600;
+    text-shadow: .02vmax .02vmax #0f0f0f;
+    bottom: 10px;
+    left: 12px;
+    width: 94px;
+    height: 37px;
+}
+
+/* Style pop up description carte */
+.ui-droppable{cursor:pointer;}
+.dialog_carte{width: 40vmax !important;height: 28vmax !important;background-color: #20557d;margin:0 auto; opacity:0.9;}
+.img_dialog{width: 50%;height: 100%;float: left;background-repeat: no-repeat;background-size: contain;}
+.dialog_content{width: 50%;float:right;}
+
+.dialog_card_description{font-size: 10em;padding: 20px;}
+.dialog_carte .cardData{width: 20.8vmax;}
+
+.ui-dialog{top:190px!important;position:absolute!important;}
+
+
+.cardData{  position: absolute;  color: white;  width: 27.8vmax;  height: 6.5vmax;  text-align: center;  font-family: 'ConthraxSb';  font-size: .1vmax;  }
+
+#cardData1{  top:0;  }
+#cardData2{  bottom: .7vmax;  }
+
+.cardData div{  display: inline-block;  }
+.cardData div p{  font-size: .5vmax;  margin-top: .2vmax;  }
+.cardData div span{  font-family: 'trs-million';  font-size: 1.5vmax;  }
+.cardData h5{  color: rgb(42,194,248);  font-weight: 200;  font-size: 1.2vmax;  margin: 1.2vmax 0 .6vmax 0;  }
+.cardData div:nth-child(2){  color: rgb(42,194,248);  }
+.cardData div:nth-child(3){  color: rgb(245,32,106);  margin: 0 4vmax 0 4vmax;  }
+.cardData div:nth-child(4){  color: rgb(103,204,50);  }
+
+
+.fixed-dialog{
+  position: fixed !important;
+  width: auto !important;
+  outline:none;
+}

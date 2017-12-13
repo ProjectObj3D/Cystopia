@@ -1,0 +1,349 @@
+@font-face{
+	font-family : "BankGothic Lt BT";
+	src : url("../fonts/bgothl.ttf") format('ttf'),
+		  url("../fonts/bgothl.woff") format('woff');
+}
+@font-face{
+  font-family : "GeosansLight";
+  src : url("../fonts/GeosansLight.ttf") format('truetype');
+}
+@font-face{
+	font-family : "Leelawadee UI";
+	src : url("../fonts/LeelawUI.ttf") format('ttf'),
+		  url("../fonts/LeelawUI.woff") format('woff');
+}
+@font-face{
+  font-family : "Earth Orbiter";
+  src : url("../fonts/earthorbiter.ttf") format('truetype');
+}
+@font-face{
+  font-family: "Earth Orbiter Condensed";
+  src : url("../fonts/earthorbitercond.ttf") format('truetype');
+}
+body {
+  font-family: 'GeosansLight';
+  font-weight: 60;
+}
+
+a {
+  color: inherit;
+
+}
+
+footer{
+  background-color : #303235;
+  padding: 40px;
+}
+footer li{
+  list-style: none;
+  margin-top: 5px;
+  color: #9E9E9E;
+}
+footer ul{
+  padding-left:0;
+}
+footer h5{
+  color : #BDBDBD;
+  font-size: 20px;
+  text-decoration:underline #9E9E9E;
+}
+
+/****************************** HEADER ******************/
+.log,.navigation{
+  font-family:"Earth Orbiter" ;
+  text-transform: uppercase;
+  color: #1972bd;
+}
+
+.row
+{
+	margin: 0;
+}
+
+.imgLogo {
+    background: url(../images/Logo.png) no-repeat;
+    width: 802px;
+    margin: 0 auto;
+    height: 300px; 
+}
+/*     ********************************************* Menu Burger ***************/
+.navbar-toggle .icon-bar { border-radius: 1px; 
+	display: 
+	block; 
+	height: 2px; 
+	width: 22px; }
+.burger {
+  display: inline-block;
+  border: 0;
+  margin-top:15px;
+  color : #3097d0;
+  background: none;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 4px solid currentColor;
+  width: 50px;
+  transition: border-bottom 1s ease-in-out;
+  -webkit-transition: border-bottom 1s ease-in-out;
+}
+.burger::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.burger:before {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.burger:after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.burger-check {
+  display: none;
+}
+.burger-check:checked ~ .burger {
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.8s ease-in-out;
+  -webkit-transition: border-bottom 0.8s ease-in-out;
+}
+.burger-check:checked ~ .burger:before {
+  transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.burger-check:checked ~ .burger:after {
+  transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.navigation {
+  overflow: hidden;
+  max-height: 0;
+  background-color: #18456b;
+  z-index: 10;
+  position: absolute;
+  display:none;
+  padding: 10px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.burger-check:checked ~ .navigation {
+  max-height: 500px;
+  border: 5px solid #3097d0;
+  width: 260px;
+  display:block;
+  opacity: 0.9;
+  transition: max-height 0.5s ease-in-out;
+}
+
+#navigation1 ul {
+  margin: 0;
+  padding: 0;
+}
+#navigation1 li {
+  list-style: none;
+  font-size: 25px;
+  padding: 5px 0;
+  border-bottom: 1px solid #3097d0;
+}
+#navigation1 li a {
+  text-decoration: none;
+  opacity: 1 !important;
+  color: #3097d0;
+}
+#navigation1 li a:hover {
+  text-decoration: underline;
+}
+
+.titre_section{
+  font-size:50px;
+  font-family: 'Earth Orbiter';
+  color: #1972bd;
+}
+.btn-jouer{
+    margin: 0 auto;
+    height: 50px;
+}
+
+.imgHexagoneDroite{
+  
+  width: 173px;
+  height: 157px;
+  transition:2s ease-in-out;
+  background: url('../images/IconeGSansEffets.png') no-repeat;
+  //animation:animeLogoDroite 2s ease-in-out infinite alternate ;
+}
+
+.imgHexagoneDroite:hover{
+  transform: scale(1.2);
+  background: url('../images/IconeGAvecEffets.png') no-repeat;
+}
+
+.imgHexagoneGauche{
+  
+  width: 173px;
+  height: 157px;
+  z-index: 5;
+  position: relative;
+  background: url('../images/MangaIconeSansEffets.png') no-repeat;
+  transition:2s ease-in-out;
+}
+
+.imgHexagoneGauche:hover{
+  transform: scale(1.2);
+  background: url('../images/MangaIconeAvecEffets.png') no-repeat;
+}
+
+
+/*************************** BODY ***********************/
+
+.first_section{
+  background-image:    url(../images/section4.jpg);
+  background-size:     cover;                     
+  background-repeat:   no-repeat;
+  background-position: center center;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  width: 100%;
+    overflow: hidden;
+}
+.first_section .btn-jouer{
+  margin-bottom: 200px;
+  margin: 100px auto 200px auto;
+}
+
+.big-triangle:before {
+    right: 50%;
+    border-right: 1000px solid transparent;
+    border-left: 1000px solid;
+}
+
+.big-triangle:after {
+    left: 50%;
+    border-left: 1000px solid transparent;
+    border-right: 1000px solid;
+}
+
+.big-triangle:after, .big-triangle:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    z-index: 100;
+
+    border-bottom: 160px solid white;
+    -moz-transform: rotate(0.000001deg);
+    -webkit-transform: rotate(0.000001deg);
+    -o-transform: rotate(0.000001deg);
+    -ms-transform: rotate(0.000001deg);
+    transform: rotate(0.000001deg);
+}
+
+.first_txt_section{
+  margin-top:100px;
+}
+
+
+.section_jeu{
+    background-image: url(../images/section2.jpg);
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+section p{
+  font-size : 18px;
+  line-height: 45px;
+  color : #8fbbe0;
+}
+.section_jeu .titre_section{
+      margin-top: 114px;
+}
+.section_equipes .titre_section,.section_acheter .titre_section{
+      margin-top: 80px;
+}
+.section_jeu .btn-regles{
+    margin : 90px auto 90px auto;
+    height: 70px;
+}
+.section_jeu .btn-jouer{
+    margin : 90px auto 90px auto;
+    height: 70px;
+}
+
+.section_equipes{
+   background-image: url(../images/section3.jpg);
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+
+
+
+.carousselle{
+    max-width: 700px;
+    margin: 100px auto 100px auto;
+}
+
+
+
+
+
+
+
+/*********************** FOOTER *****************/
+
+
+.logo-footer{
+    background:url(../images/cystopia.png) no-repeat;
+}
+
+.section_acheter{
+  background-image:    url(../images/section4.jpg);
+  background-size:     cover;                     
+  background-repeat:   no-repeat;
+  background-position: center center;
+  margin: 0 auto;
+  height: 1080px;
+  width: 100%;
+}
+.sociaux{
+  font-size: 30px;
+  text-align: center;
+}
+.sociaux i{
+  color : #BDBDBD;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.sociaux i:hover{
+  color : #757575;
+}
+.sociaux a:hover{
+  text-decoration: none;
+}
+.icon-reseaux, .btn-play{
+  margin-top: 40px;
+}
+
